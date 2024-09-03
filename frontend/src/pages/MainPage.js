@@ -11,14 +11,14 @@ const MainPage = () => {
             <Header/>
             <Container style={{ flex: '1' }}>
                 <Box my={4}>
-                    <Typography variant="h4" component="h1" gutterBottom style={{marginTop: 40}}>
+                    <Typography variant="h4" component="h1" gutterBottom sx={{mt: 5}}>
                         本ページについて
                     </Typography>
                     <Typography variant="body1" gutterBottom>
                         これは、MUIを使用したメインページです.
                     </Typography>
 
-                    <Typography variant="h4" gutterBottom style={{marginTop: 40}}>
+                    <Typography variant="h4" gutterBottom sx={{mt: 5}}>
                         サービス一覧
                     </Typography>
                     <Typography valiant={"h6"}>* ユーザー登録が必要なサービス</Typography>

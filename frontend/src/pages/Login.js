@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 
 const Login = () => {
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
             <Header/>
-            <Container maxWidth="sm">
+            <Container maxWidth="sm" style={{flex: '1'}}>
                 <Box my={4}>
                     <Typography variant="h4" component="h1" gutterBottom>
                         ログイン

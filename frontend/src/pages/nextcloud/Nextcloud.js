@@ -1,19 +1,17 @@
-//src/pages/ComputeResourceService.js
-
-import * as React from 'react';
-import Header from "../components/Header";
+import Header from "../../components/Header";
 import {Button, Grid, Typography} from "@mui/material";
 import {Link} from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "../../components/Footer";
+import * as React from "react";
 
-const ComputeResourceService = () => {
+const Nextcloud = () => {
     return (
         <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh', overflowX: 'hidden'}}>
             <Header/>
             <Grid container spacing={3} sx={{ml: 4, mt: 2}} style={{flex: '1'}}>
                 <Grid item xs={12}>
                     <Typography variant="h4" gutterBottom sx={{fontWeight: 'bold', color: 'primary.main'}}>
-                        計算リソース提供サービス
+                        クラウドストレージサービス
                     </Typography>
                 </Grid>
 
@@ -22,21 +20,10 @@ const ComputeResourceService = () => {
                         サービス概要
                     </Typography>
                     <Typography variant="h6" gutterBottom sx={{mb: 2}}>
-                        本サービスでは以下の計算機リソースを利用することができます．
+                        本サービスではクラウドストレージを利用することができます．
                     </Typography>
                     <Typography variant="h5" sx={{fontWeight: 'bold', mb: 2}}>
-                        利用可能なリソース
-                    </Typography>
-                    <ul style={{paddingLeft: '20px', marginBottom: '16px'}}>
-                        <li>CPU: Xeon Silver</li>
-                        <li>GPU:  Tesla P100</li>
-                    </ul>
-                    <Typography variant="h6" sx={{mt: 2}}>
-                        詳細なマシンスペックは<Link to="/service3" style={{
-                        color: '#3f51b5',
-                        textDecoration: 'none',
-                        fontWeight: 'bold'
-                    }}>こちら</Link>を参照
+                        利用可能容量: 100GB
                     </Typography>
                 </Grid>
 
@@ -56,9 +43,6 @@ const ComputeResourceService = () => {
                 </Grid>
             </Grid>
             <Footer/>
-        </div>
-
-    );
+        </div>);
 }
-
-export default ComputeResourceService;
+export default Nextcloud;
