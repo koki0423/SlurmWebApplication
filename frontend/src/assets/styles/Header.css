@@ -1,0 +1,15 @@
+/* Header.css */
+
+.app-bar {
+    background-color: #232f3e;
+    height: 70px;
+}
+
+.logo {
+    width: 80%;
+    height: 80%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}

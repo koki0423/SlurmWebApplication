@@ -2,14 +2,18 @@
 import React from 'react';
 import {Typography, Container, Box, Grid} from "@mui/material";
 import {Card, CardActionArea, CardContent} from '@mui/material';
+import CloudIcon from '@mui/icons-material/Cloud';
+import MemoryIcon from '@mui/icons-material/Memory';
+import AssessmentIcon from '@mui/icons-material/Assessment';
 import {Link} from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer'
+
 const MainPage = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
             <Header/>
-            <Container style={{ flex: '1' }}>
+            <Container style={{flex: '1'}}>
                 <Box my={4}>
                     <Typography variant="h4" component="h1" gutterBottom sx={{mt: 5}}>
                         本ページについて
@@ -27,7 +31,8 @@ const MainPage = () => {
                             <Card>
                                 <CardActionArea component={Link} to="/service1">
                                     <CardContent>
-                                        <Typography variant="h6" style={{fontWeight: 'bold'}}>* Nextcloud</Typography>
+                                        <Typography variant="h6" style={{fontWeight: 'bold'}}><CloudIcon
+                                            sx={{mr: 1}}/> * Nextcloud</Typography>
                                         <Typography variant="body1">クラウドストレージを利用できます</Typography>
                                     </CardContent>
                                 </CardActionArea>
@@ -37,17 +42,19 @@ const MainPage = () => {
                             <Card>
                                 <CardActionArea component={Link} to="/service2">
                                     <CardContent>
-                                        <Typography variant="h6" style={{fontWeight: 'bold'}}>* 計算リソース提供サービス</Typography>
+                                        <Typography variant="h6" style={{fontWeight: 'bold'}}><MemoryIcon sx={{mr: 1}}/>*
+                                            計算リソース提供サービス</Typography>
                                         <Typography variant="body1">CPUとGPUのサーバーを利用できます*</Typography>
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
                         </Grid>
-                        <Grid item xs={4} >
+                        <Grid item xs={4}>
                             <Card>
                                 <CardActionArea component={Link} to="/service3">
                                     <CardContent>
-                                        <Typography variant="h6" style={{fontWeight: 'bold'}}>システム構成と稼働状況</Typography>
+                                        <Typography variant="h6"
+                                                    style={{fontWeight: 'bold'}}><AssessmentIcon sx={{mr: 1}}/>システム構成と稼働状況</Typography>
                                         <Typography variant="body1">システムの構成と稼働状況を見られます</Typography>
                                     </CardContent>
                                 </CardActionArea>

@@ -3,14 +3,15 @@ import React from 'react';
 import {AppBar, Button, Toolbar, Typography} from "@mui/material";
 import {Logo} from "./common/Icons";
 import {Link} from "react-router-dom";
+import '../assets/styles/Header.css'
 
 const Header = () => {
     return (
-        <AppBar position="static">
-            <Toolbar>
+        <AppBar position="static" className="app-bar" style={{backgroundColor: "#232f3e"}}>
+            <Toolbar className="toolbar">
                 <div style={{width: "10%", display: "flex", alignItems: "center"}}>
                     <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
-                        <Logo style={{width: "100%", height: "auto"}}/>
+                        <Logo className="logo"/>
                     </Link>
                 </div>
                 <Typography variant="h3" component="div" sx={{flexGrow: 1, marginLeft: 2}}>
@@ -18,7 +19,7 @@ const Header = () => {
                         My React App
                     </Link>
                 </Typography>
-                <Button variant={"h2"} color="inherit" component={Link} to="/login">
+                <Button variant="h2" color="inherit" component={Link} to="/login">
                     Login
                 </Button>
             </Toolbar>
@@ -27,3 +28,4 @@ const Header = () => {
 }
 
 export default Header;
+
